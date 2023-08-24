@@ -1,4 +1,3 @@
-<html>
   <h2>
   Let your Arduino play music
   </h2>
@@ -241,7 +240,7 @@
     #define END -1
     </code><br></li>
   </ol>
-</html>
+
 
 
 
