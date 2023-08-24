@@ -20,7 +20,7 @@
     <li>
       For other Operating Systems, follow the installation instructions on the Website https://www.arduino.cc/en/software
     </li>
-    <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines:<br> 
+    <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. This file has a name ending with .ino and will contain the instructions for the Arduino. For now, it only contains these lines:<br> 
       
       void setup() {
       // put your setup code here, to run once:
@@ -30,7 +30,7 @@
         // put your main code here, to run repeatedly: 
       }
 <br>
-<li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino speaker" or just leave the default name, which is "sketch_" followed by the date of today.</li>
+<li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino-speaker.ino" or just leave the default name, which is "sketch_" followed by the date of today and the .ino ending.</li>
   </ol>
   <h4>Connect a speaker to the Arduino</h4>
  <ol>
@@ -43,14 +43,14 @@
  </ol>
   <h4> Telling the Arduino IDE to speak with the Arduino</h4>
   <ol>
-    <li>Now we need to connect the Arduino IDE with the Arduino we just plugged in. Go to the menu "Tools" > "Board" > "Arduino AVR board" and select the name of your Arduino model. In my case, I have an "Arduino Uno" (actually, a cheaper version by another company, but it behaves just like an Arduino Uno).</li>
-    <li>Then, go to the menu "Tools" > "Port" and choose a port on which your Arduino is connected to your computer. On my computer, I can choose between the options "/dev/ttyS4", "/dev/ttyACM0", "/dev/ttyACM1", "/dev/ttyACM2" and "/dev/ttyACM3 (Arduino Uno)". So it automatically tells me which port the Arduino is connected to, and I just choose this one (/dev/ttyACM3).</li>
+    <li>Now we need to connect the Arduino IDE with the Arduino we just plugged in. First, we need to tell Arduino IDE which model we are using. Go to the menu "Tools" > "Board" > "Arduino AVR board" and select the name of your Arduino model. In my case, I have an "Arduino Uno" (actually, a cheaper version by another company, but it behaves just like an Arduino Uno).</li>
+    <li>Then, we need to tell Arduino IDE where to find the Arduino (because you could have multiple similar devices plugged into your computer at the same time). Go to the menu "Tools" > "Port" and choose a port on which your Arduino is connected to your computer. On my computer, I can choose between the options "/dev/ttyS4", "/dev/ttyACM0", "/dev/ttyACM1", "/dev/ttyACM2" and "/dev/ttyACM3 (Arduino Uno)". So it automatically tells me which port the Arduino Uno is connected to, and I just choose this one (/dev/ttyACM3).</li>
     <li> Now your Arduino IDE can talk to your Arduino and write code on it!</li>
   </ol>
   <h4>Uploading code to the Arduino</h4>
   <ol>
     <li>Now, we need code that we can put on the Arduino. You could write that yourself, but for the start we'll just copy code from an existing project, for example the tutorial I mentioned above: https://maker.pro/arduino/projects/arduino-speaker <br>
-    So we copy this code into our Arduino IDE:
+    So we copy this code into our .ino file in the Arduino IDE:
     <br>
       
       /*Arduino speaker song tutorial
@@ -144,6 +144,7 @@
       
 <br>
 </li>
+<li> Now, this looks quite complex. I will not explain all the code, and I don't understand everything that's written in it anyway :) But some basic things if you want to understand what it does: Every line starting with // is a comment, that means, just there to explain humans what's going on, but ignored by the computer. The same is true for blocks of lines starting with <code> /* </code> and ending with <code> */ </code> </li>
 <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
 So we need a file called "pitches.h". To create it, we move to the three little dots in the right corner of our Arduino IDE window. We click on them, and choose "New Tab". We are asked for a name and enter "pitches.h". </li>
     <li>The tutorial tells us what needs to be in this file: <br>
