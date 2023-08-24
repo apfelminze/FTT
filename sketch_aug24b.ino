@@ -1,9 +1,6 @@
 /*Arduino speaker song tutorial
 * The song is played on the speaker connected to pin 3 and GND.
-* 
-* Created 26 Oct 2015
-* by Akshay James
-* Video at https://www.youtube.com/watch?v=LgtcUxe8fmA
+* by Akshay James, modified by roza
 */
 
 #include"pitches.h"
