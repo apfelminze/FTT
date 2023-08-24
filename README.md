@@ -144,9 +144,8 @@
       
 <br>
 </li>
-<li> Now, this looks quite complex. I will not explain all the code, and I don't understand everything that's written in it anyway :) But some basic things if you want to understand what it does: Every line starting with // is a comment, that means, just there to explain humans what's going on, but ignored by the computer. The same is true for blocks of lines starting with <code> /* </code> and ending with <code> */ </code> </li>
-<li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
-So we need a file called "pitches.h". To create it, we move to the three little dots in the right corner of our Arduino IDE window. We click on them, and choose "New Tab". We are asked for a name and enter "pitches.h". </li>
+<li> Now, this looks quite complex. I will not explain all the code, and I don't understand everything that's written in it anyway :) But some basic things if you want to understand what it does: Every line starting with <code> // </code> is a comment, that means, just there to explain humans what's going on, but ignored by the computer. The same is true for blocks of lines starting with <code> /* </code> and ending with <code> */ </code> </li>. Then, quite at the beginning, we have a long list called <code> melody[]</code> that contains all the music notes. For example, <code> NOTE_D4 </code> means the Arduino will play a D note. The number 4 indicates which D note is played (a low one, middle one, high one etc.). The Arduino will look up what <code>NOTE_D4</code> in a second file called "pitches.h". We can see how in line 9 of the code (<code>#include"pitches.h"</code>), the .ino file is connected to the pitches.h file. As we will see later, the pitches.h file will make the connection between the name <code>NOTE_D4</code> and the corresponding frequency, that is 262 (Hertz).
+<li> Now, we have a first file (the .ino file) with code for the Arduino in it. As the tutorial mentions, we need a second file too, the "pitches.h" file. To create it, we move to the three little dots in the right corner of our Arduino IDE window. We click on them, and choose "New Tab". We are asked for a name and enter "pitches.h". </li>
     <li>The tutorial tells us what needs to be in this file: <br>
       
     #define NOTE_B0  31
@@ -241,13 +240,14 @@ So we need a file called "pitches.h". To create it, we move to the three little 
     #define END -1
 
 <br></li>
-<li> Now, we click on the Tick symbol in the left corner (Verify). If no errors show up ("Done compiling"), we click on the Arrow symbol next to it (Upload). The Arduino IDE needs a little time to upload and informs you when finished ("Done uploading"). </li>
+<li> Now, we have all the frequencies for the music notes, and the Arduino can look them up if needed.
+<li> Now, we can upload our code to the Arduino. We click on the Tick symbol in the left corner (Verify). If no errors show up ("Done compiling"), we click on the Arrow symbol next to it (Upload). The Arduino IDE needs a little time to upload and informs you when finished ("Done uploading"). </li>
 <li> You should already hear the music! <3 <3 </li>
   </ol>
 
   <h4> Changing the music</h4>
   <ol> 
-    <li>The file "pitches.h" is connecting musical notes to frequencies. So it's always necessary to translate musical notes for the Arduino. What we can play around with now is the first file, the one with the .ino ending. It has a part starting with <code> int melody[] = </code> that describes the actual song that should be played.</li>
+    <li>The file "pitches.h" is connecting musical notes to frequencies. So it's always necessary to translate musical notes for the Arduino. What we can play around with now is the first file, the one with the .ino ending. It has a part starting with <code> int melody[] = </code> that describes the actual song (notes) that should be played. It also has a part <code> noteDurations[] </code> that says how long these notes should each be. The Arduino will take the first note from the melody list, and look up its duration (first number in noteDurations list).</li>
     <li>I changed this song from the one in the tutorial to "Smells Like Teen Spirit". You can find the modified file here: https://github.com/apfelminze/FTT/blob/main/sketch_aug24b.ino</li>
     <li> If you change your .ino file to my code, and verify and upload again, your Arduino will play Teen Spirit :) </li>
   </ol>
