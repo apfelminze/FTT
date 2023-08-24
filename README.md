@@ -8,9 +8,7 @@
   </li>
     <li>
       For Linux: After you downloaded the program as an AppImage (a file that is called something similar to "arduino-ide_2.1.1_Linux_64bit.AppImage"), you need to make it executable. You can do by going to your Download folder (or whereever you saved the AppImage file), right-click, choose "Open a Terminal here" and then enter the following command:
-      <code>
-        chmod +x APPIMAGE
-      </code>
+      <code>chmod +x APPIMAGE </code>
       where instead of APPIMAGE you have to write the name of the file, for example "arduino-ide_2.1.1_Linux_64bit.AppImage". Press Enter to execute this command. When there is no error message, it means this command has worked well.
     </li>
     <li>
