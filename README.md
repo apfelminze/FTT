@@ -21,6 +21,7 @@
       For other Operating Systems, follow the installation instructions on the Website https://www.arduino.cc/en/software
     </li>
     <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines:<br> 
+      
       void setup() {
       // put your setup code here, to run once:
       }
