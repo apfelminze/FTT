@@ -149,7 +149,7 @@ void loop() {
 }
       </code><br>
     </li>
-    <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: "#include"pitches.h".
+    <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
     So we need a file called "pitches.h". To create it, we move to the three little dots in the right corner of our Arduino IDE window. We click on them, and choose "New Tab". We are asked for a name and enter "pitches.h". </li>
     <li>The tutorial tells us what needs to be in this file: <br><code>
     #define NOTE_B0  31
