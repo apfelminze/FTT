@@ -240,6 +240,15 @@ So we need a file called "pitches.h". To create it, we move to the three little 
     #define END -1
 
 <br></li>
+<li> Now, we click on the Tick symbol in the left corner (Verify). If no errors show up ("Done compiling"), we click on the Arrow symbol next to it (Upload). The Arduino IDE needs a little time to upload and informs you when finished ("Done uploading"). </li>
+<li> You should already hear the music! <3 <3 </li>
+  </ol>
+
+  <h4> Changing the music</h4>
+  <ol> 
+    <li>The file "pitches.h" is connecting musical notes to frequencies. So it's always necessary to translate musical notes for the Arduino. What we can play around with now is the first file, the one with the .ino ending. It has a part starting with <code> int melody[] = </code> that describes the actual song that should be played.</li>
+    <li>I changed this song from the one in the tutorial to "Smells Like Teen Spirit". You can find the modified file here: https://github.com/apfelminze/FTT/blob/main/sketch_aug24b.ino</li>
+    <li> If you change your .ino file to my code, and verify and upload again, your Arduino will play Teen Spirit :) </li>
   </ol>
 
 
