@@ -23,6 +23,7 @@
     </li>
     <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines: 
     <br>
+      ```
       void setup() {
       // put your setup code here, to run once:
       }
@@ -31,7 +32,7 @@
         // put your main code here, to run repeatedly:
       
       }
-      <br>
+     ```
     </li>
       <li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino speaker" or just leave the default name, which is "sketch_" followed by the date of today.</li>
   </ol>
