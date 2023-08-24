@@ -20,9 +20,7 @@
     <li>
       For other Operating Systems, follow the installation instructions on the Website https://www.arduino.cc/en/software
     </li>
-    <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines: </li></ol>
-    
-      <span><code>   
+    <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines:<br> 
       void setup() {
       // put your setup code here, to run once:
       }
@@ -30,9 +28,8 @@
       void loop() {
         // put your main code here, to run repeatedly: 
       }
-     </code></span>
-     <ol>
-      <li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino speaker" or just leave the default name, which is "sketch_" followed by the date of today.</li>
+<br>
+<li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino speaker" or just leave the default name, which is "sketch_" followed by the date of today.</li>
   </ol>
   <h4>Connect a speaker to the Arduino</h4>
  <ol>
