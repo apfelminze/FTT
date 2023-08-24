@@ -51,7 +51,8 @@
   <ol>
     <li>Now, we need code that we can put on the Arduino. You could write that yourself, but for the start we'll just copy code from an existing project, for example the tutorial I mentioned above: https://maker.pro/arduino/projects/arduino-speaker <br>
     So we copy this code into our Arduino IDE:
-    <br><code>
+    <br>
+      
       /*Arduino speaker song tutorial
       * This program will play the theme song of the Malayalam movie
       * 'Ennu Ninte Moideen'. The song is 'Mukkathe Penne'.
@@ -140,7 +141,7 @@
       void loop() {
       // no need to repeat the melody.
       }
-      </code><br>
+      <br>
     </li>
     <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
     So we need a file called "pitches.h". To create it, we move to the three little dots in the right corner of our Arduino IDE window. We click on them, and choose "New Tab". We are asked for a name and enter "pitches.h". </li>
