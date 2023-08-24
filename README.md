@@ -141,6 +141,7 @@
       void loop() {
       // no need to repeat the melody.
       }
+      
       <br>
     </li>
     <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
