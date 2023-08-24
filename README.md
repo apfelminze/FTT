@@ -14,9 +14,7 @@
     </li>
     <li>
       For Linux: Then you can start the program by writing another command to the terminal:
-      <br><code>
-        ./APPIMAGE
-      </code><br>
+      <br><code>./APPIMAGE</code><br>
       Again, you need to exchange APPIMAGE for the name of your file, for example "arduino-ide_2.1.1_Linux_64bit.AppImage".
       The program will now open in another window. You need to leave the Terminal open as long as you want to use the program
     </li>
@@ -26,16 +24,14 @@
     <li> Once you installed and opened the Arduino IDE, it will automatically create a new file for you. For now, it only contains these lines: 
     <br><code>
       void setup() {
-  // put your setup code here, to run once:
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-
-</code><br>
+      // put your setup code here, to run once:
+      }
+      
+      void loop() {
+        // put your main code here, to run repeatedly:
+      
+      }
+      </code><br>
     </li>
       <li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino speaker" or just leave the default name, which is "sketch_" followed by the date of today.</li>
   </ol>
@@ -59,94 +55,94 @@ void loop() {
     <li>Now, we need code that we can put on the Arduino. You could write that yourself, but for the start we'll just copy code from an existing project, for example the tutorial I mentioned above: https://maker.pro/arduino/projects/arduino-speaker <br>
     So we copy this code into our Arduino IDE:
     <br><code>
-/*Arduino speaker song tutorial
-* This program will play the theme song of the Malayalam movie
-* 'Ennu Ninte Moideen'. The song is 'Mukkathe Penne'.
-* The song is played on the speaker connected to pin 3 and GND.
-* 
-* Created 26 Oct 2015
-* by Akshay James
-* Video at https://www.youtube.com/watch?v=LgtcUxe8fmA
-*/
-
-#include"pitches.h"
-
-// notes in the song 'Mukkathe Penne'
-int melody[] = {
-NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
-NOTE_G4, NOTE_C5, NOTE_AS4, NOTE_A4,                   
-NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
-NOTE_C4, NOTE_D4,0,                                 
-
-NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
-NOTE_G4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4,      //29               //8
-NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
-NOTE_C4, NOTE_D4,0,                                       
-
-NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
-NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5,
-NOTE_C4, NOTE_D4, NOTE_DS4, NOTE_FS4, NOTE_D5, NOTE_C5,
-NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_AS4,             //58
-
-NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
-NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_G4,
-NOTE_A4, 0, NOTE_AS4, NOTE_A4, 0, NOTE_G4,
-NOTE_G4, NOTE_A4, NOTE_G4, NOTE_FS4, 0,
-
-NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
-NOTE_C4, NOTE_D4, 0,
-NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
-NOTE_C4, NOTE_D4, END
-
-};
-
-// note durations: 8 = quarter note, 4 = 8th note, etc.
-int noteDurations[] = {       //duration of the notes
-8,4,8,4,
-4,4,4,12,
-4,4,4,4,4,4,
-4,16,4,
-
-8,4,8,4,
-4,2,1,1,2,1,1,12,
-4,4,4,4,4,4,
-4,16,4,
-
-4,4,4,4,4,4,
-4,4,4,12,
-4,4,4,4,4,4,
-4,4,4,12,
-
-4,4,4,4,4,4,
-2,1,1,2,1,1,4,8,4,
-2,6,4,2,6,4,
-2,1,1,16,4,
-
-4,8,4,4,4,
-4,16,4,
-4,8,4,4,4,
-4,20,
-};
-
-int speed=90;  //higher value, slower notes
-void setup() {
-
-Serial.begin(9600);
-for (int thisNote = 0; melody[thisNote]!=-1; thisNote++) {
-
-int noteDuration = speed*noteDurations[thisNote];
-tone(3, melody[thisNote],noteDuration*.95);
-Serial.println(melody[thisNote]);
-
-delay(noteDuration);
-
-noTone(3);
-}
-}
-
-void loop() {
-// no need to repeat the melody.
-}
+      /*Arduino speaker song tutorial
+      * This program will play the theme song of the Malayalam movie
+      * 'Ennu Ninte Moideen'. The song is 'Mukkathe Penne'.
+      * The song is played on the speaker connected to pin 3 and GND.
+      * 
+      * Created 26 Oct 2015
+      * by Akshay James
+      * Video at https://www.youtube.com/watch?v=LgtcUxe8fmA
+      */
+      
+      #include"pitches.h"
+      
+      // notes in the song 'Mukkathe Penne'
+      int melody[] = {
+      NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
+      NOTE_G4, NOTE_C5, NOTE_AS4, NOTE_A4,                   
+      NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
+      NOTE_C4, NOTE_D4,0,                                 
+      
+      NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
+      NOTE_G4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4,      //29               //8
+      NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
+      NOTE_C4, NOTE_D4,0,                                       
+      
+      NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
+      NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5,
+      NOTE_C4, NOTE_D4, NOTE_DS4, NOTE_FS4, NOTE_D5, NOTE_C5,
+      NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_AS4,             //58
+      
+      NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
+      NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_G4,
+      NOTE_A4, 0, NOTE_AS4, NOTE_A4, 0, NOTE_G4,
+      NOTE_G4, NOTE_A4, NOTE_G4, NOTE_FS4, 0,
+      
+      NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
+      NOTE_C4, NOTE_D4, 0,
+      NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
+      NOTE_C4, NOTE_D4, END
+      
+      };
+      
+      // note durations: 8 = quarter note, 4 = 8th note, etc.
+      int noteDurations[] = {       //duration of the notes
+      8,4,8,4,
+      4,4,4,12,
+      4,4,4,4,4,4,
+      4,16,4,
+      
+      8,4,8,4,
+      4,2,1,1,2,1,1,12,
+      4,4,4,4,4,4,
+      4,16,4,
+      
+      4,4,4,4,4,4,
+      4,4,4,12,
+      4,4,4,4,4,4,
+      4,4,4,12,
+      
+      4,4,4,4,4,4,
+      2,1,1,2,1,1,4,8,4,
+      2,6,4,2,6,4,
+      2,1,1,16,4,
+      
+      4,8,4,4,4,
+      4,16,4,
+      4,8,4,4,4,
+      4,20,
+      };
+      
+      int speed=90;  //higher value, slower notes
+      void setup() {
+      
+      Serial.begin(9600);
+      for (int thisNote = 0; melody[thisNote]!=-1; thisNote++) {
+      
+      int noteDuration = speed*noteDurations[thisNote];
+      tone(3, melody[thisNote],noteDuration*.95);
+      Serial.println(melody[thisNote]);
+      
+      delay(noteDuration);
+      
+      noTone(3);
+      }
+      }
+      
+      void loop() {
+      // no need to repeat the melody.
+      }
       </code><br>
     </li>
     <li> Now, we have a first file with code for the Arduino in it. But as the tutorial mentions, we need a second file too. The reason for that is that the first file "calls" a second file with this statement in line 9: <code>#include"pitches.h"</code>
