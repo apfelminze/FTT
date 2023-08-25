@@ -254,6 +254,8 @@
 <h4>
   My Song:
 </h4>
+<br>
+
 /*Arduino speaker song tutorial
 * The song is played on the speaker connected to pin 3 and GND.
 * 
@@ -367,6 +369,8 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
+
+<br>
 
 
 
