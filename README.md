@@ -31,7 +31,8 @@
       }
 <br>
 <li> Click on "save". It will ask you for a name of this project, you can call it something like "arduino-speaker.ino" or just leave the default name, which is "sketch_" followed by the date of today and the .ino ending.</li>
-  </ol>
+</ol>
+
   <h4>Connect a speaker to the Arduino</h4>
  <ol>
    <li>I roughly followed this tutorial: https://maker.pro/arduino/projects/arduino-speaker<br>
