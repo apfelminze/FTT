@@ -40,7 +40,7 @@
    <li>I am using an old little speaker that was inside a grandma phone. It has one white cable and one green cable coming out of it. So I researched "speaker green and white cable" to find out which of those two cables is usually the power cable and which one is the ground cable. This website (https://www.systoncable.com/speaker-wire-color-codes/) suggested that White is for positive and Green is for ground. </li>
    <li>So I want to connect the white cable to Digital Pin 3 and the green cable to ground. For that, I first have to remove a little bit of the green/white plastic at the end of the cables, so some copper from the inside can stick out and successfully connect to the pins of the Arduino. I removed approx. 5mm of plastic.</li>
    <li> Then, I drill the copper wires that are inside the green/white cable a bit around each other, so they become one thingy. After that, I stick them into the holes Digital Pin 3 and Ground. How to find them? The Arduino has some parts on it that look like walls with holes in them from above. On the walls, there are white stripes with descriptions of what the holes (pins) in this part of the wall are for. You will find descriptions like "POWER", "ANALOG IN" and "DIGITAL". So Digital Pin 3 is the hole number 3 in the "DIGITAL" section. To find Ground, search for any hole named "GND".</li>
-   <li> Connect the Arduino to your computer with the correct cable. </li>
+   <li> Connect the Arduino to your computer with the USB cable. </li>
  </ol>
   <h4> Telling the Arduino IDE to speak with the Arduino</h4>
   <ol>
