@@ -1,7 +1,7 @@
   <h2>
   Let your Arduino play music
   </h2>
-  Steps:
+ <h4>Steps:</h4> 
   <ol>
     <li> Installation of the Arduino IDE</li>
     <li> Connect a speaker to the Arduino</li>
